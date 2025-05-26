@@ -1,0 +1,2 @@
+# vertex_ai_summarizer
+Chrome extension delivers concise and accurate summaries of webpages. Whether you're reading articles, research papers, or long reports, this extension helps you save time by providing the key points at a glance.
