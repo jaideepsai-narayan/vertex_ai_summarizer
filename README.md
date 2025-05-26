@@ -23,12 +23,12 @@ This project showcases real-time summarization directly in the browser, offering
   Designed to reduce reading time while retaining essential insights.
 
 
-- **frontend generated output:**
+- **Generated output:**
 
 
  <img src="https://github.com/user-attachments/assets/077d3304-0e82-4692-b390-944827f6bc87" width="700"/>
 
-- **backend generated output:**
+- **Backend generated output:**
 
 
 <img src="https://github.com/user-attachments/assets/058ba657-f608-4619-bda7-f14a012e27cd" width="700"/>
