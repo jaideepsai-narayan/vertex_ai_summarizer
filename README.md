@@ -103,6 +103,6 @@ Now open chrome and click on URL Sender Extension and click on Send URL button.
 Pull requests are welcome! For major changes, please open an issue first to discuss what you'd like to change.
 
 ### 📫 Contact
-Created by Jaideep Sai Narayan
-Feel free to reach out via GitHub Issues or LinkedIn!
+Created by [Jaideep Sai Narayan](https://github.com/jaideepsai-narayan)
+Feel free to reach out via GitHub Issues or [LinkedIn](https://in.linkedin.com/in/jaideep-sai-narayan-kamisetti-06312018b)!
 
