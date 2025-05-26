@@ -56,7 +56,7 @@ This project showcases real-time summarization directly in the browser, offering
 ### Environment Setup:
 
 ```
-https://github.com/jaideepsai-narayan/vertex_ai_summarizer.git
+git clone https://github.com/jaideepsai-narayan/vertex_ai_summarizer.git
 ```
 
 ```
