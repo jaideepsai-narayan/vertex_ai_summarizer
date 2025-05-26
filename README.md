@@ -13,7 +13,7 @@ Chrome extension delivers concise and accurate summaries of webpages. Whether yo
 <img src="https://github.com/user-attachments/assets/058ba657-f608-4619-bda7-f14a012e27cd" width="700"/>
 
 ## Verified Environment:
-- [Google Cloud]([https://cloud.google.com/])
+- [GoogleCloud]([https://cloud.google.com/])
 - Local Setup
 
 ## Environment Setup:
@@ -41,7 +41,7 @@ Here just open the repository that you cloned. So you can see the extension has 
 
 ### NOTE :
 
-In [Web.py]([./web.py]) please update your **project** and **location** as shown in the below screenshot.
+In [Web.py]([web.py]) please update your **project** and **location** as shown in the below screenshot.
 
 <img src="https://github.com/user-attachments/assets/513ee4a7-c5f9-4288-98d6-00af4e402c0f" width="700"/>
 
