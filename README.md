@@ -139,5 +139,5 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ### 📫 Contact
 Created by [Jaideep Sai Narayan](https://github.com/jaideepsai-narayan)
-Feel free to reach out via GitHub Issues or [LinkedIn](https://in.linkedin.com/in/jaideep-sai-narayan-kamisetti-06312018b)!
+Feel free to reach out via GitHub Issues or [LinkedIn!](https://in.linkedin.com/in/jaideep-sai-narayan-kamisetti-06312018b)
 
