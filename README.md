@@ -1,6 +1,7 @@
 ## Webpage-summarizer:
 
 # 🧠 Vertex AI Web Page Summarizer – Chrome Extension
+# 🧠 Vertex AI Summarizer Chrome Extension — With & Without RAG 
 
 A powerful and user-friendly Chrome extension that leverages **Google Cloud's Vertex AI**, powered by the **Gemini 2.5 Flash** model, to generate **concise and intelligent summaries** of web content. Designed to help users quickly understand key points from lengthy articles, research papers, blogs, and more — all without leaving the page.
 
@@ -47,7 +48,7 @@ This project showcases real-time summarization directly in the browser, offering
 - Ideal for students, professionals, and busy readers
 
 ---
-## 🧑‍💻 Getting Started
+## 🧑‍💻 Getting Started — Without RAG
 
 ### Prerequisites
 - [Google Cloud](https://cloud.google.com/) account with Vertex AI enabled
@@ -99,6 +100,20 @@ Just run server.py file to launch flask.
 python server.py
 ```
 Now open chrome and click on URL Sender Extension and click on Send URL button.
+
+---
+## 🧑‍💻 Getting Started — With RAG
+
+### Environment Setup:
+```
+pip install --upgrade google-cloud-aiplatform
+```
+
+
+
+
+
+
 
 ---
 ### 🙌 Contributions
