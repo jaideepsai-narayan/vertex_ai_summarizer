@@ -2,7 +2,11 @@
 - **Description:** 
 Chrome extension delivers concise and accurate summaries of webpages. Whether you're reading articles, research papers, or long reports, this extension helps you save time by providing the key points at a glance.
 
-![image](https://github.com/user-attachments/assets/9cf670a2-8ca8-407b-b972-7babb28324c9)
+- **frontend generated output:**
+![image](https://github.com/user-attachments/assets/077d3304-0e82-4692-b390-944827f6bc87)
+
+- **backend generated output:**
+![image](https://github.com/user-attachments/assets/058ba657-f608-4619-bda7-f14a012e27cd)
 
 ## Verified Environment:
 [Intel® Tiber™ AI Cloud](https://www.intel.com/content/www/us/en/developer/tools/devcloud/services.html)
