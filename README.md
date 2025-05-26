@@ -11,14 +11,17 @@ Chrome extension delivers concise and accurate summaries of webpages. Whether yo
 ![image](https://github.com/user-attachments/assets/058ba657-f608-4619-bda7-f14a012e27cd)
 
 ## Verified Environment:
-[Intel® Tiber™ AI Cloud](https://www.intel.com/content/www/us/en/developer/tools/devcloud/services.html)
-
-[Intel® Data Center GPU Max Series](https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/max-series.html)
+- [Google Cloud]([https://cloud.google.com/?hl=en])
+- Local Setup
 
 ### Environment Setup:
 Click on Extensions-->Manage extensions-->Load Unpacked.
 Here just open the repository that you cloned. So you can see the extension has been added as shown below.
 ![image](https://github.com/user-attachments/assets/11d4c239-5b79-4610-994a-541ed64f6728)
+
+```
+pip install -r requirements.txt
+```
 
 ## Running:
 Just run server.py file to launch flask.
