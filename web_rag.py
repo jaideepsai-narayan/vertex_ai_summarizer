@@ -64,7 +64,13 @@ def out(urls):
     )
     
     # Generate response
-    response = rag_model.generate_content("What is RAG and why it is helpful?")
+    prompt="""
+    You are an expert AI assistant to summarize the documents.
+    Your primary goal is to help underwriters by accurately and concisely summarizing client information and highlighting potential risk factors.
+    Maintain a professional and objective tone.
+    Focus only on the information provided in the prompt. Do not invent details.
+    """
+    response = rag_model.generate_content(prompt)
     return response.text
     
     
