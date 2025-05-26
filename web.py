@@ -22,8 +22,10 @@ def out(urls):
     def generate(doc):
         client = genai.Client(
             vertexai=True,
-            project="qwiklabs-gcp-04-3686803f71e2",
-            location="global",
+            # fill your project id
+            project="<your_project_id>",
+            # fill your location
+            location="<your_location>",
         )
 
         msg1_text1 = types.Part.from_text(text=doc)
