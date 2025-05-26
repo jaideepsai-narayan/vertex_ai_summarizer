@@ -1,5 +1,3 @@
-## Webpage-summarizer:
-
 # 🧠 Vertex AI Web Page Summarizer – Chrome Extension
 # 🧠 Vertex AI Summarizer Chrome Extension — With & Without RAG 
 
