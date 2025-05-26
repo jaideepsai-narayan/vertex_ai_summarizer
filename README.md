@@ -113,7 +113,7 @@ pip install --upgrade google-cloud-aiplatform
 
 In [server.py](./server.py) please change "from web import out" -> "from web_rag import out" i.e
 
-<img src="https://github.com/user-attachments/assets/09ccff86-7627-45c5-bbcb-c8a94fcb68c9" width="700"/>
+<img src="https://github.com/user-attachments/assets/09ccff86-7627-45c5-bbcb-c8a94fcb68c9" width="400"/>
 
 
 
@@ -121,7 +121,7 @@ In [server.py](./server.py) please change "from web import out" -> "from web_rag
 
 In [web_rag.py](./web_rag.py) please update your **project_id** and **location** as shown in the below screenshot.
 
-<img src="https://github.com/user-attachments/assets/30bb57b1-99ef-4258-806d-b750553d83e1" width="700"/>
+<img src="https://github.com/user-attachments/assets/30bb57b1-99ef-4258-806d-b750553d83e1" width="400"/>
 
 ### Running:
 Just run server.py file to launch flask.
