@@ -2,7 +2,9 @@
 
 # 🧠 Vertex AI Web Page Summarizer – Chrome Extension
 
-A powerful and user-friendly Chrome extension that leverages **Google Cloud's Vertex AI** to generate **concise and intelligent summaries** of web content. Designed to help users quickly understand key points from lengthy articles, research papers, blogs, and more — all without leaving the page.
+A powerful and user-friendly Chrome extension that leverages **Google Cloud's Vertex AI**, powered by the **Gemini 2.5 Flash** model, to generate **concise and intelligent summaries** of web content. Designed to help users quickly understand key points from lengthy articles, research papers, blogs, and more — all without leaving the page.
+
+This project showcases real-time summarization directly in the browser, offering a smooth and efficient way to digest complex or long-form content with the help of cutting-edge AI.
 
 ---
 
