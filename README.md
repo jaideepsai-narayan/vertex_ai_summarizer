@@ -22,6 +22,10 @@ Chrome extension delivers concise and accurate summaries of webpages. Whether yo
 pip install -r requirements.txt
 ```
 
+```
+gcloud auth application-default login
+```
+
 Click on Extensions-->Manage extensions-->Load Unpacked.
 Here just open the repository that you cloned. So you can see the extension has been added as shown below.
 
