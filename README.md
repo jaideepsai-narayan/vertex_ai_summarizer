@@ -107,6 +107,9 @@ Now open chrome and click on URL Sender Extension and click on Send URL button.
 ## 🧑‍💻 Getting Started — With RAG
 
 ### Environment Setup:
+
+Install this additional package in the environment you just created to use RAG
+
 ```
 pip install --upgrade google-cloud-aiplatform
 ```
