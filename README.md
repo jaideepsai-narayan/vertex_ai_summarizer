@@ -4,11 +4,13 @@ Chrome extension delivers concise and accurate summaries of webpages. Whether yo
 
 - **frontend generated output:**
 
-![image](https://github.com/user-attachments/assets/077d3304-0e82-4692-b390-944827f6bc87)
+
+ <img src="https://github.com/user-attachments/assets/077d3304-0e82-4692-b390-944827f6bc87" width="900"/>
 
 - **backend generated output:**
 
-![image](https://github.com/user-attachments/assets/058ba657-f608-4619-bda7-f14a012e27cd)
+
+<img src="https://github.com/user-attachments/assets/058ba657-f608-4619-bda7-f14a012e27cd" width="900"/>
 
 ## Verified Environment:
 - [Google Cloud]([https://cloud.google.com/?hl=en])
@@ -22,7 +24,10 @@ pip install -r requirements.txt
 
 Click on Extensions-->Manage extensions-->Load Unpacked.
 Here just open the repository that you cloned. So you can see the extension has been added as shown below.
-![image](https://github.com/user-attachments/assets/11d4c239-5b79-4610-994a-541ed64f6728)
+
+
+<img src="https://github.com/user-attachments/assets/11d4c239-5b79-4610-994a-541ed64f6728" width="900"/>
+
 
 
 ## Running:
