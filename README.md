@@ -14,14 +14,16 @@ Chrome extension delivers concise and accurate summaries of webpages. Whether yo
 - [Google Cloud]([https://cloud.google.com/?hl=en])
 - Local Setup
 
-### Environment Setup:
-Click on Extensions-->Manage extensions-->Load Unpacked.
-Here just open the repository that you cloned. So you can see the extension has been added as shown below.
-![image](https://github.com/user-attachments/assets/11d4c239-5b79-4610-994a-541ed64f6728)
+## Environment Setup:
 
 ```
 pip install -r requirements.txt
 ```
+
+Click on Extensions-->Manage extensions-->Load Unpacked.
+Here just open the repository that you cloned. So you can see the extension has been added as shown below.
+![image](https://github.com/user-attachments/assets/11d4c239-5b79-4610-994a-541ed64f6728)
+
 
 ## Running:
 Just run server.py file to launch flask.
