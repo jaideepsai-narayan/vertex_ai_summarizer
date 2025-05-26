@@ -41,7 +41,7 @@ Here just open the repository that you cloned. So you can see the extension has 
 
 ### NOTE :
 
-In [web.py]([web.py]) please update your **project** and **location** as shown in the below screenshot.
+In [web.py]([.web.py]) please update your **project** and **location** as shown in the below screenshot.
 
 <img src="https://github.com/user-attachments/assets/513ee4a7-c5f9-4288-98d6-00af4e402c0f" width="700"/>
 
