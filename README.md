@@ -1,5 +1,5 @@
 
-# 🧠 Chrome Extension for AI Summarization Using Vertex AI + RAG (Optional) 
+# 🧠 Chrome Extension for AI Summarization Using Vertex AI + RAG
 
 A powerful and user-friendly Chrome extension that leverages **Google Cloud's Vertex AI**, powered by the **Gemini 2.5 Flash** model, to generate **concise and intelligent summaries** of web content. Designed to help users quickly understand key points from lengthy articles, research papers, blogs, and more — all without leaving the page.
 
@@ -25,7 +25,9 @@ This project showcases real-time summarization directly in the browser, offering
 - **Generated output:**
 
 
- <img src="https://github.com/user-attachments/assets/077d3304-0e82-4692-b390-944827f6bc87" width="700"/>
+ <img src="https://github.com/user-attachments/assets/3b81b25e-9c45-4a33-8991-c9dbca605205" width="700"/>
+
+
 
 - **Backend generated output:**
 
@@ -87,44 +89,11 @@ Load the extension into Chrome:
 
 ### NOTE :
 
-In [web.py](./web.py) please update your **project** and **location** as shown in the below screenshot.
+In [google_model.py](./google_model.py) please update your **project** and **location** as shown in the below screenshot.
 
-<img src="https://github.com/user-attachments/assets/513ee4a7-c5f9-4288-98d6-00af4e402c0f" width="700"/>
-
-
-### Running:
-Just run server.py file to launch flask.
-```
-python server.py
-```
-Now open chrome and click on URL Sender Extension and click on Send URL button.
+<img src="https://github.com/user-attachments/assets/6af584e5-6d1d-422d-bba1-d45f7f3ca1d8" width="700"/>
 
 
-
----
-
-
-## 🧑‍💻 Getting Started — With RAG
-
-### Environment Setup:
-
-Install this additional package in the environment you just created to use RAG
-
-```
-pip install --upgrade google-cloud-aiplatform
-```
-
-In [server.py](./server.py) please change "from web import out" -> "from web_rag import out" i.e
-
-<img src="https://github.com/user-attachments/assets/09ccff86-7627-45c5-bbcb-c8a94fcb68c9" width="400"/>
-
-
-
-
-
-In [web_rag.py](./web_rag.py) please update your **project_id** and **location** as shown in the below screenshot.
-
-<img src="https://github.com/user-attachments/assets/30bb57b1-99ef-4258-806d-b750553d83e1" width="400"/>
 
 ### Running:
 Just run server.py file to launch flask.
