@@ -32,9 +32,13 @@ def rag_qa(query):
     
     context=webrag(doc_text,query)
     prompt="""
-    You are an expert AI assistant to answer questions based on the input context.
-    Maintain a professional and objective tone.
-    Focus only on the information provided in the prompt. Do not invent details.
+    You are a professional AI assistant tasked with answering user questions based solely on the provided context.
+
+    Use a clear, simple, and objective tone.
+
+    Do not include any information not present in the context.
+
+    If the question cannot be answered using the context, respond by stating that the answer is not available.
     """
     return generate(context,prompt,100)
 
