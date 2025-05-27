@@ -57,6 +57,11 @@ This project showcases real-time summarization directly in the browser, offering
 ### Environment Setup:
 
 ```
+conda create -n vertex_ai python==3.10
+conda activate vertex_ai
+```
+
+```
 git clone https://github.com/jaideepsai-narayan/vertex_ai_summarizer.git
 ```
 
