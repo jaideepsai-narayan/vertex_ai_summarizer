@@ -1,9 +1,9 @@
 
 # 🧠 Chrome Extension for AI Summarization Using Vertex AI + RAG
 
-A powerful and user-friendly Chrome extension that leverages **Google Cloud's Vertex AI**, powered by the **Gemini 2.5 Flash** model, to generate **concise and intelligent summaries** of web content. Designed to help users quickly understand key points from lengthy articles, research papers, blogs, and more — all without leaving the page.
+A powerful and user-friendly Chrome extension that lets you chat with any web page and ask questions directly about its content. Powered by Google Cloud's Vertex AI and the Gemini 2.5 Flash model, it enables intelligent, context-aware conversations with articles, research papers, blogs, and more — without ever leaving the page.
 
-This project showcases real-time summarization directly in the browser, offering a smooth and efficient way to digest complex or long-form content with the help of cutting-edge AI.
+This project brings real-time question-answering and contextual summarization right into your browser, helping you understand complex or lengthy content effortlessly using cutting-edge AI.
 
 ---
 
