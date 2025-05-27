@@ -5,6 +5,14 @@ A powerful and user-friendly Chrome extension that lets you chat with any web pa
 
 This project brings real-time question-answering and contextual summarization right into your browser, helping you understand complex or lengthy content effortlessly using cutting-edge AI.
 
+### Implemented with Retrieval-Augmented Generation (RAG):
+
+	•	Chunking: Divide the webpage content into meaningful sections.
+	•	Embedding: Convert these chunks into vector representations using embedding models.
+	•	Storage: Store embeddings in a vector database like FAISS
+	•	Retrieval: On user queries, retrieve relevant chunks and generate responses using a language model.
+	•	Benefits: Provides more contextually relevant and accurate summaries or answers.
+
 ---
 
 ## 🚀 Features
