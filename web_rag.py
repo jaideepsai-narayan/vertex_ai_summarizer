@@ -1,77 +1,68 @@
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_community.document_transformers import Html2TextTransformer
-# from transformers import AutoTokenizer,AutoModelForCausalLM,pipeline,TextStreamer
+from sentence_transformers import SentenceTransformer
+import faiss
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
-from vertexai import rag
-from vertexai.generative_models import GenerativeModel, Tool
-import vertexai
+def webrag(doc,query):
+    # 1. Load & clean webpage content
+    def load_and_clean(url):
+        loader = WebBaseLoader(url)
+        docs = loader.load()
+        transformer = Html2TextTransformer()
+        clean_docs = transformer.transform_documents(docs)
+        text = clean_docs[0].page_content
+        return text
 
-import os
-import sys
+    # 2. Chunk text with overlap
+    def chunk_text(text, chunk_size=150, overlap=50):
+        words = text.split()
+        chunks = []
+        start = 0
+        while start < len(words):
+            end = min(start + chunk_size, len(words))
+            chunks.append(" ".join(words[start:end]))
+            start += chunk_size - overlap
+        return chunks
 
-# pip install --upgrade google-genai
-# gcloud auth application-default login
+    # 3. Build FAISS index from chunks
+    def build_faiss_index(chunks, embed_model):
+        embeddings = embed_model.encode(chunks, convert_to_numpy=True)
+        index = faiss.IndexFlatL2(embeddings.shape[1])
+        index.add(embeddings)
+        return index, embeddings
 
-def out(urls):
-    
-    loader = WebBaseLoader(urls)
-    docs = loader.load()
-    html2text = Html2TextTransformer()
-    docs_transformed = html2text.transform_documents(docs)
-    # print(docs_transformed[0].page_content[0:500])
-    doc=docs_transformed[0].page_content
-    
-    filename = "inp.txt"
-    
-    append_string = docs
-    if os.path.exists(filename):
-        os.remove(filename)
-        print(f"{filename} existed and has been removed.")
-    else:
-        with open(filename, "a") as f:
-            f.write(append_string)
-        print(f"{filename} did not exist. String appended.")
-      
-    # Initialize Vertex AI API once per session
-    vertexai.init(project="project_id", location="location")
-    
-    # Direct context retrieval
-    rag_retrieval_config = rag.RagRetrievalConfig(
-        top_k=3,  # Optional
-        filter=rag.Filter(vector_distance_threshold=0.5),  # Optional
-    )
+    # 4. Retrieve top-k relevant chunks for a query
+    def retrieve_chunks(query, embed_model, index, chunks, k=3):
+        q_emb = embed_model.encode([query])
+        _, idxs = index.search(q_emb, k)
+        return [chunks[i] for i in idxs[0]]
 
-    # Enhance generation
-    # Create a RAG retrieval tool
-    rag_retrieval_tool = Tool.from_retrieval(
-        retrieval=rag.Retrieval(
-            source=rag.VertexRagStore(
-                rag_resources=[
-                    rag.RagResource(
-                        rag_corpus=filename,  # Currently only 1 corpus is allowed.
-                        # Optional: supply IDs from `rag.list_files()`.
-                        # rag_file_ids=["rag-file-1", "rag-file-2", ...],
-                    )
-                ],
-                rag_retrieval_config=rag_retrieval_config,
-            ),
-        )
-    )
+    # # 5. Generate answer with HuggingFace causal LM
+    # def generate_answer(context, query, model_name="tiiuae/falcon-rw-1b"):
+    #     prompt = f"Context:\n{context}\n\nQuestion: {query}\nAnswer:"
+    #     tokenizer = AutoTokenizer.from_pretrained(model_name)
+    #     model = AutoModelForCausalLM.from_pretrained(model_name)
+    #     generator = pipeline("text-generation", model=model, tokenizer=tokenizer, max_new_tokens=100)
+    #     output = generator(prompt)[0]["generated_text"]
+    #     return output
 
-    # Create a Gemini model instance
-    rag_model = GenerativeModel(
-        model_name="gemini-2.0-flash-001", tools=[rag_retrieval_tool]
-    )
-    
-    # Generate response
-    prompt="""
-    You are an expert AI assistant to summarize the documents.
-    Your primary goal is to help underwriters by accurately and concisely summarizing client information and highlighting potential risk factors.
-    Maintain a professional and objective tone.
-    Focus only on the information provided in the prompt. Do not invent details.
-    """
-    response = rag_model.generate_content(prompt)
-    return response.text
-    
-    
-    
+    # ----------- USAGE ------------
+
+    # url = "https://medium.com/@zhonghong9998/attention-mechanisms-in-deep-learning-enhancing-model-performance-32a91006092a"
+    # text = load_and_clean(url)
+    chunks = chunk_text(doc, chunk_size=150, overlap=50)
+
+    embed_model = SentenceTransformer("all-MiniLM-L6-v2")
+    index, embeddings = build_faiss_index(chunks, embed_model)
+
+    # query = "Who is the author?"
+    retrieved = retrieve_chunks(query, embed_model, index, chunks, k=3)
+    context = "\n".join(retrieved)
+
+    # answer = generate_answer(context, query)
+    # print("\n--- Answer ---\n", answer)
+    # print(context)
+
+    prompt=f"Answer the question based on the context below:\n\nContext:\n{context}\n\nQuestion: {query}\nAnswer:"
+    return prompt

@@ -1,24 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>URL Sender</title>
+  <title>Summarize This Page</title>
   <style>
-    body {
+    html, body {
+      margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
-      width: 300px;
-      padding: 10px;
-      background-color: rgba(246, 220, 72, 0.975);
+      width: 320px;
+      max-height: 600px;
+      overflow-y: auto; /* Entire popup scrolls if needed */
+      background-color: #f6dc48;
     }
-    .url, .response {
+
+    .container {
+      padding: 15px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .response {
       word-break: break-word;
+      font-size: 0.9em;
+      color: rgb(10, 10, 10);
+      max-height: 150px;       /* Independent scroll area */
+      overflow-y: auto;
+      white-space: pre-wrap;   /* Preserve line breaks */
+      background: #fff8c6;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    textarea, input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 8px 12px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <h1>Summarize This Page</h1>
-  <p id="url" class="url">Loading...</p>
-  <button id="sendUrl">Send URL</button>
-  <p id="response" class="response"></p>
+  <div class="container">
+    <div class="section">
+      <h2>Summarize This Page</h2>
+      <p id="url" class="url">Loading...</p>
+      <button id="sendUrl">Send URL</button>
+      <div id="urlResponse" class="response"></div>
+    </div>
+
+    <hr>
+
+    <div class="section">
+      <h2>Ask a Question</h2>
+      <textarea id="questionInput" placeholder="Type your question here..."></textarea>
+      <button id="sendQuestion">Ask Question</button>
+      <div id="questionResponse" class="response"></div>
+    </div>
+  </div>
+
   <script src="popup.js"></script>
 </body>
 </html>
