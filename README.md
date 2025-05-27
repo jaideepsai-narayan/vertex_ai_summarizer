@@ -11,6 +11,9 @@ This project brings real-time question-answering and contextual summarization ri
 
 - ✨ **AI-Powered Summarization**  
   Uses Google's Vertex AI language models to generate high-quality summaries.
+  
+- 💬 **RAG Question-Answering**  
+  Ask questions directly about the page you're reading
 
 - 🖱️ **One-Click Summary**  
   Simple and intuitive Chrome toolbar button for instant access.
