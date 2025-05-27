@@ -6,9 +6,9 @@ def generate(doc,prompt,maxtokens=10):
         client = genai.Client(
             vertexai=True,
             # fill your project id
-            project="qwiklabs-gcp-01-3285111e9bbe",
+            project="<your_project_id>",
             # fill your location
-            location="global",
+            location="<location>",
         )
 
         msg1_text1 = types.Part.from_text(text=doc)
